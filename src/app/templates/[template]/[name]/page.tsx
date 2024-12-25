@@ -6,7 +6,7 @@ import { useResume } from "@/context/ResumeContext";
 import React, { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
 
-const page = () => {
+const ResumePage = () => {
   const { formData } = useResume();
   const resumeRef = useRef<HTMLDivElement>(null);
 
@@ -41,4 +41,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ResumePage;

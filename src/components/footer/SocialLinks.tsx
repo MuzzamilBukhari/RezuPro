@@ -20,7 +20,12 @@ const SocialLinks = ({
     <div className="flex items-center space-x-2">
       <span className="font-bold">{name} -</span>
       {links.map((link) => (
-        <a href={link.link} target="_blank" rel="noopener noreferrer">
+        <a
+          href={link.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          key={link.id}
+        >
           <Icon icon={link.icon} />
         </a>
       ))}
