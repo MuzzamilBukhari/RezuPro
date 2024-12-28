@@ -1,15 +1,14 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import Template1Form from "@/components/templates/template1/Template1Form";
-import { Template1 } from "@/components";
+import React from "react";
+import { Template2Form, Template1Form } from "@/components";
 
 const templates = {
   template1: {
-    id: 1,
-    name: "template1",
-    component: Template1,
     form: Template1Form,
+  },
+  template2: {
+    form: Template2Form,
   },
 };
 

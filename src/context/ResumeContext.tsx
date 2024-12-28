@@ -1,23 +1,19 @@
 "use client";
 
+import { Template1, Template2 } from "@/data/ResumeData";
 import React, { createContext, useContext, useState, ReactNode } from "react";
-import { Template1 } from "@/data/ResumeData";
-// Define the shape of the form data
 
-// Define the shape of the context
 interface ResumeContextType {
-  formData: Template1 | null;
-  setFormData: (data: Template1) => void;
+  formData: Template1 | Template2 | null;
+  setFormData: (data: Template1 | Template2 | null) => void;
+  selectedTemplate: string;
+  setSelectedTemplate: (template: string) => void;
 }
 
-// Create the context
 const ResumeContext = createContext<ResumeContextType | undefined>(undefined);
 
-// Create a provider component
-export const ResumeProvider: React.FC<{ children: ReactNode }> = ({
-  children,
-}) => {
-  const [formData, setFormData] = useState<Template1>({
+export const ResumeProvider = ({ children }: { children: ReactNode }) => {
+  const [formData, setFormData] = useState<Template1 | Template2 | null>({
     header: {
       name: "",
       email: "",
@@ -30,19 +26,21 @@ export const ResumeProvider: React.FC<{ children: ReactNode }> = ({
     projects: [{ id: 0, name: "", description: "", link: "" }],
     certificates: [{ id: 0, name: "", link: "" }],
   });
+  const [selectedTemplate, setSelectedTemplate] = useState("template1");
 
   return (
-    <ResumeContext.Provider value={{ formData, setFormData }}>
+    <ResumeContext.Provider
+      value={{ formData, setFormData, selectedTemplate, setSelectedTemplate }}
+    >
       {children}
     </ResumeContext.Provider>
   );
 };
 
-// Hook to use the context
-export const useResume = (): ResumeContextType => {
-  const context = useContext(ResumeContext);
-  if (!context) {
-    throw new Error("useResume must be used within a ResumeProvider");
+export const useResume = () => {
+  const resumeContext = useContext(ResumeContext);
+  if (!resumeContext) {
+    throw new Error("not found");
   }
-  return context;
+  return resumeContext;
 };

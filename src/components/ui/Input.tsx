@@ -9,6 +9,7 @@ const Input = ({
   onChange,
   required,
   readOnly,
+  className,
 }: {
   type?: string;
   id?: string;
@@ -18,6 +19,7 @@ const Input = ({
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   required?: boolean;
   readOnly?: boolean;
+  className?: string;
 }) => {
   return (
     <div>
@@ -30,7 +32,7 @@ const Input = ({
         required={required}
         placeholder={placeholder}
         readOnly={readOnly}
-        className="w-full bg-primary bg-opacity-10 rounded border border-primary/60 focus:border-primary focus:bg-transparent focus:ring-2 focus:ring-primary/40 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+        className={`w-full bg-primary bg-opacity-10 rounded border border-primary/60 focus:border-primary focus:bg-transparent focus:ring-2 focus:ring-primary/40 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ${className}`}
       />
     </div>
   );

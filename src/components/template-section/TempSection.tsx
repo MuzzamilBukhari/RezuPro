@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
 import TempSectionCard from "./TempSectionCard";
+import { TbCircleNumber1, TbCircleNumber2 } from "react-icons/tb";
 
 const TempSection = () => {
   return (
@@ -26,8 +27,16 @@ const TempSection = () => {
             represents you!
           </p>
         </div>
-        <TempSectionCard name={"template1"} />
-        <TempSectionCard name={"template2"} />
+        <div className="flex flex-wrap justify-center gap-8">
+          <TempSectionCard
+            name="template1"
+            icon={<TbCircleNumber1 className="text-black" />}
+          />
+          <TempSectionCard
+            name="template2"
+            icon={<TbCircleNumber2 className="text-black" />}
+          />
+        </div>
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-import EducationType from "@/types/Education";
+import EducationType from "@/types/Education1";
 
 export function Education({ education }: { education?: EducationType[] }) {
   return (
