@@ -1,4 +1,4 @@
-import { Contact, HeroSection, Template2 } from "@/components/";
+import { Contact, HeroSection } from "@/components/";
 export default function Home() {
   return (
     <div>
