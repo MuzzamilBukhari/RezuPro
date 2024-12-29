@@ -7,7 +7,14 @@ const Label = ({
   htmlFor: string;
   children: ReactNode;
 }) => {
-  return <label htmlFor={htmlFor}>{children}</label>;
+  return (
+    <label
+      htmlFor={htmlFor}
+      className="block text-sm font-medium text-black mb-1"
+    >
+      {children}
+    </label>
+  );
 };
 
 export default Label;

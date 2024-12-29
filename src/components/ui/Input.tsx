@@ -32,7 +32,9 @@ const Input = ({
         required={required}
         placeholder={placeholder}
         readOnly={readOnly}
-        className={`w-full bg-primary bg-opacity-10 rounded border border-primary/60 focus:border-primary focus:bg-transparent focus:ring-2 focus:ring-primary/40 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ${className}`}
+        className={
+          "w-full mb-2 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-secondary focus:border-secondary"
+        }
       />
     </div>
   );
