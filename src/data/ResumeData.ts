@@ -33,23 +33,5 @@ interface Template2 {
   certificates: Certificate[];
 }
 
-interface Template3 {
-  name: string;
-  profileSummary: string;
-  phone: string;
-  email: string;
-  certifications: string[];
-  education: { institute: string; year: string; degree: string }[];
-  workExperience: {
-    company: string;
-    position: string;
-    duration: string;
-    responsibilities: string[];
-  }[];
-  projects: string[];
-  skills: string[];
-}
-
 export type { Template1 };
 export type { Template2 };
-export type { Template3 };
