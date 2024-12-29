@@ -416,7 +416,7 @@ import { useResume } from "@/context/ResumeContext";
 import { Template1 } from "@/data/ResumeData";
 import Project from "@/types/Project";
 import Certificate from "@/types/Certificate";
-import Education from "@/types/Education1";
+import Education from "@/types/Education";
 import {
   Award,
   Briefcase,

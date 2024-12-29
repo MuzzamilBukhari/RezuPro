@@ -1,11 +1,11 @@
 "use client";
 
-import { Template1, Template2 } from "@/data/ResumeData";
+import { Template1, Template2, Template3 } from "@/data/ResumeData";
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
 interface ResumeContextType {
-  formData: Template1 | Template2 | null;
-  setFormData: (data: Template1 | Template2 | null) => void;
+  formData: Template1 | Template2 | Template3 | null;
+  setFormData: (data: Template1 | Template2 | Template3 | null) => void;
   selectedTemplate: string;
   setSelectedTemplate: (template: string) => void;
 }
@@ -13,19 +13,9 @@ interface ResumeContextType {
 const ResumeContext = createContext<ResumeContextType | undefined>(undefined);
 
 export const ResumeProvider = ({ children }: { children: ReactNode }) => {
-  const [formData, setFormData] = useState<Template1 | Template2 | null>({
-    header: {
-      name: "",
-      email: "",
-      phone: "",
-      github: "",
-      linkedin: "",
-    },
-    skills: [""],
-    education: [{ id: 0, degree: "", institution: "", details: "" }],
-    projects: [{ id: 0, name: "", description: "", link: "" }],
-    certificates: [{ id: 0, name: "", link: "" }],
-  });
+  const [formData, setFormData] = useState<
+    Template1 | Template2 | Template3 | null
+  >(null);
   const [selectedTemplate, setSelectedTemplate] = useState("template1");
 
   return (

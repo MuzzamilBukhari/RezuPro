@@ -133,13 +133,13 @@ const Template1 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
               href={`mailto:${typedFormData?.header.email}`}
               className=" hover:underline"
             >
-              {typedFormData.header.email}
+              {typedFormData?.header.email}
             </a>
             <span className="mx-2">|</span>
-            <span>{typedFormData.header.phone}</span>
+            <span>{typedFormData?.header.phone}</span>
           </div>
           <div className="mt-4 flex justify-between text-black">
-            {typedFormData.header.github && (
+            {typedFormData?.header.github && (
               <a
                 style={{ display: "flex", alignItems: "center" }}
                 href={`https://github.com/${typedFormData?.header.github}`}
@@ -150,12 +150,12 @@ const Template1 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
                 />
                 @
                 <span style={{ fontSize: "16px", lineHeight: "20px" }}>
-                  {typedFormData.header.github}
+                  {typedFormData?.header.github}
                 </span>
               </a>
             )}
 
-            {typedFormData.header.linkedin && (
+            {typedFormData?.header.linkedin && (
               <a
                 href={`https://linkedin.com/in/${typedFormData?.header.linkedin}`}
                 style={{ display: "flex", alignItems: "center" }}
@@ -186,7 +186,7 @@ const Template1 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
           ) : (
             ""
           )}
-          {formData?.certificates.length ? (
+          {typedFormData?.certificates.length ? (
             <Certificates certificates={typedFormData?.certificates} />
           ) : (
             ""

@@ -26,12 +26,11 @@ const templates = {
 };
 
 const Page = () => {
-  const { formData, selectedTemplate } = useResume();
+  const { selectedTemplate } = useResume();
   const resumeRef = useRef<HTMLDivElement>(null);
-  const typedFormData = formData as TypeTemplate1;
   const handlePrint = useReactToPrint({
     contentRef: resumeRef,
-    documentTitle: `${typedFormData?.header.name}_Resume`,
+    documentTitle: `resume`,
     onAfterPrint: () => console.log("PDF generated successfully"),
   });
 

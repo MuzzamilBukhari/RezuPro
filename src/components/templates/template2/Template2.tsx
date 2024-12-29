@@ -1,7 +1,9 @@
+import { useResume } from "@/context/ResumeContext";
 import React, { forwardRef } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoLocation, IoPersonCircle, IoSchool } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
+import { Template2 as TypeTemplate2 } from "@/data/ResumeData";
 
 interface ResumeTemplateProps {
   // Add any props your resume template needs
@@ -9,6 +11,8 @@ interface ResumeTemplateProps {
 
 const Template2 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
   (props, ref) => {
+    const { formData } = useResume();
+    const typedFormData = formData as TypeTemplate2;
     return (
       <div className="min-h-screen bg-gray-100 p-4 md:p-8" ref={ref}>
         <div className="mx-auto max-w-5xl bg-white shadow-lg">
@@ -17,7 +21,7 @@ const Template2 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
               <div className="mb-8">
                 <div className="bg-white text-[#DD4B39] p-2 mb-4 inline-block">
                   <h3 className="font-bold text-base md:text-lg">
-                    COMPUTER SCIENCE
+                    {typedFormData.field.toUpperCase()}
                   </h3>
                 </div>
               </div>
@@ -29,8 +33,7 @@ const Template2 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
                     ADDRESS
                   </h3>
                   <p className="text-xs md:text-sm break-words">
-                    House Number 188 area Baloch colony Shaheed Milat road
-                    Karachi
+                    {typedFormData.address}
                   </p>
                 </section>
 
@@ -39,7 +42,7 @@ const Template2 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
                     <FaPhoneAlt className="w-4 h-4 md:w-5 md:h-5" />
                     CONTACT
                   </h3>
-                  <p className="text-xs md:text-sm">+92 305 2894 339</p>
+                  <p className="text-xs md:text-sm">{typedFormData.phone}</p>
                 </section>
 
                 <section>
@@ -48,7 +51,7 @@ const Template2 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
                     EMAIL
                   </h3>
                   <p className="text-xs md:text-sm break-words">
-                    meerbaloch5225@gmail.com
+                    {typedFormData.email}
                   </p>
                 </section>
 
@@ -57,8 +60,10 @@ const Template2 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
                     <IoPersonCircle className="w-5 h-5 md:w-6 md:h-6" />
                     PROFILE
                   </h3>
-                  <p className="text-xs md:text-sm">DOB: 10 DEC 1997</p>
-                  <p className="text-xs md:text-sm">GENDER: Male</p>
+                  <p className="text-xs md:text-sm">DOB: {typedFormData.dob}</p>
+                  <p className="text-xs md:text-sm">
+                    GENDER: {typedFormData.gender}
+                  </p>
                 </section>
 
                 <section>
@@ -67,35 +72,15 @@ const Template2 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
                     EDUCATION
                   </h3>
                   <div className="space-y-4">
-                    <div>
-                      <h4 className="font-bold text-xs md:text-sm">
-                        Graduation:
-                      </h4>
-                      <p className="text-xs md:text-sm">
-                        BSCS (Computer Science)
-                      </p>
-                      <p className="text-xs md:text-sm">
-                        University of Sindh Jamshoro in 2020
-                      </p>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-xs md:text-sm">
-                        Intermediate:
-                      </h4>
-                      <p className="text-xs md:text-sm">
-                        B.I.S.E Pre-Engineering Mirpurkhas in 2015
-                      </p>
-                      <p className="text-xs md:text-sm italic">1ST DIVISION</p>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-xs md:text-sm">
-                        Matriculation:
-                      </h4>
-                      <p className="text-xs md:text-sm">
-                        B.I.S.E Science Mirpurkhas in 2013
-                      </p>
-                      <p className="text-xs md:text-sm italic">1ST DIVISION</p>
-                    </div>
+                    {typedFormData.education.map((edu) => (
+                      <div key={edu.id}>
+                        <h4 className="font-bold text-xs md:text-sm">
+                          {edu.degree}:
+                        </h4>
+                        <p className="text-xs md:text-sm">{edu.institution}</p>
+                        <p className="text-xs md:text-sm">{edu.details}</p>
+                      </div>
+                    ))}
                   </div>
                 </section>
               </div>
@@ -104,10 +89,10 @@ const Template2 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
             <div className="p-6">
               <header className="mb-8">
                 <h1 className="text-3xl md:text-4xl font-bold text-[#DD4B39] mb-1">
-                  AMEER BUX
+                  {typedFormData.name.toUpperCase()}
                 </h1>
                 <h2 className="text-lg md:text-xl font-bold text-[#DD4B39]">
-                  NETWORKING ENGINEER
+                  {typedFormData.title.toUpperCase()}
                 </h2>
               </header>
 
@@ -117,14 +102,7 @@ const Template2 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
                     OBJECTIVE
                   </h3>
                   <p className="text-xs md:text-sm">
-                    Motivated and skilled Network Engineer, recently graduated
-                    with a bachelor&apos;s degree in Computer Science from
-                    University of Sindh Jamshoro. Possessing a strong foundation
-                    in networking principles, with a focus on Cisco
-                    technologies. Recently completed CCNA and currently pursuing
-                    Routing and Switching certification. Seeking opportunities
-                    to apply theoretical knowledge and hands-on skills in a
-                    dynamic professional environment.
+                    {typedFormData.objective}
                   </p>
                 </section>
 
@@ -133,14 +111,9 @@ const Template2 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
                     EXPERIENCE
                   </h3>
                   <ul className="text-xs md:text-sm list-disc list-inside">
-                    <li>
-                      02-Year Working Experience As a Computer Operator In Sindh
-                      Education Foundation (SEF) School.
-                    </li>
-                    <li>
-                      Working As a Business Development officer (BDO) in
-                      Bankislami
-                    </li>
+                    {typedFormData.experience.map((exp, index) => (
+                      <li key={index}>{exp}</li>
+                    ))}
                   </ul>
                 </section>
               </div>
