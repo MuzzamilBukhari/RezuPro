@@ -11,10 +11,10 @@ const Testimonials = () => {
         </h2>
         <div className="flex flex-col text-center w-full mb-11">
           <p className="lg:w-2/3 mx-auto mt-2 leading-relaxed text-base pt-2 sm:pt-12 text-black">
-            Our users' feedback is a testament to the impact of RezuPro. From
-            job seekers to professionals looking to enhance their resumes, hear
-            from those who have experienced the difference our tool makes in
-            shaping their careers. Get inspired by their stories and join the
+            Our user&apos;s feedback is a testament to the impact of RezuPro.
+            From job seekers to professionals looking to enhance their resumes,
+            hear from those who have experienced the difference our tool makes
+            in shaping their careers. Get inspired by their stories and join the
             growing community of satisfied users who trust RezuPro for building
             a standout resume.
           </p>
@@ -30,9 +30,9 @@ const Testimonials = () => {
                 src="/images/1.jpg"
               />
               <p className="leading-relaxed mb-4">
-                "RezuPro made building my resume so much easier. The templates
-                are sleek and professional, and the process was quick and
-                intuitive. I highly recommend it!"
+                &quot;RezuPro made building my resume so much easier. The
+                templates are sleek and professional, and the process was quick
+                and intuitive. I highly recommend it!&quot;
               </p>
               <div className="flex justify-center mb-4">
                 {/* Stars rating */}
@@ -58,10 +58,10 @@ const Testimonials = () => {
                 src="/images/2.jpg"
               />
               <p className="leading-relaxed mb-4">
-                "This tool helped me stand out in a competitive job market. I
-                was able to create a resume that not only looks great but also
+                &quot;This tool helped me stand out in a competitive job market.
+                I was able to create a resume that not only looks great but also
                 highlights my skills and experience effectively. I’m very
-                satisfied!"
+                satisfied!&quot;
               </p>
               <div className="flex justify-center mb-4">
                 {/* Stars rating */}
@@ -87,9 +87,10 @@ const Testimonials = () => {
                 src="/images/3.jpg"
               />
               <p className="leading-relaxed mb-4">
-                "I’ve used several resume builders before, but RezuPro is by far
-                the best. The design is sleek, modern, and easy to customize. My
-                resume looks fantastic and I feel much more confident now."
+                &quot;I&apos;ve used several resume builders before, but RezuPro
+                is by far the best. The design is sleek, modern, and easy to
+                customize. My resume looks fantastic and I feel much more
+                confident now.&quot;
               </p>
               <div className="flex justify-center mb-4">
                 {/* Stars rating */}

@@ -13,11 +13,11 @@ const BestTemplate = () => {
         </h3>
         <p className="lg:w-2/3 mx-auto mt-2 leading-relaxed text-base pt-2 sm:pt-12 text-black">
           Explore our curated collection of the best resume templates, designed
-          to help you stand out in the competitive job market. Whether you're a
-          fresh graduate or a seasoned professional, these templates provide the
-          perfect foundation to showcase your skills, experience, and
-          achievements. Select your favorite, customize it, and take the first
-          step toward landing your dream job!
+          to help you stand out in the competitive job market. Whether
+          you&apos;re a fresh graduate or a seasoned professional, these
+          templates provide the perfect foundation to showcase your skills,
+          experience, and achievements. Select your favorite, customize it, and
+          take the first step toward landing your dream job!
         </p>
       </div>
 
