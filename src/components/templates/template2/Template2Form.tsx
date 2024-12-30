@@ -248,7 +248,7 @@ const Template2Form = () => {
                   placeholder="Institution"
                   className="w-full mb-2 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-secondary focus:border-secondary"
                 />
-                <textarea
+                <Textarea
                   value={edu.details}
                   onChange={(e) =>
                     handleObjectArrayChange(
@@ -259,7 +259,6 @@ const Template2Form = () => {
                     )
                   }
                   placeholder="Details"
-                  className="bg-primary bg-opacity-10  border-primary/60 focus:border-primary focus:bg-transparent focus:ring-2 focus:ring-primary/40 text-base outline-none text-black  leading-8 transition-colors duration-200 ease-in-out w-full mb-2 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-secondary"
                 />
 
                 <button
@@ -267,7 +266,7 @@ const Template2Form = () => {
                   onClick={() => removeArrayItem("education", index)}
                   className="flex items-center px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors duration-200"
                 >
-                  <MinusCircle size={20} className="mr-2" /> Remove Education
+                  <MinusCircle size={20} className="mr-2" /> Remove
                 </button>
               </div>
             ))}
@@ -311,6 +310,7 @@ const Template2Form = () => {
               rows={4}
             />
           </div>
+
           <div className="mb-12">
             <h2 className="text-3xl font-bold mb-4 text-[#036BFF] flex items-center">
               <MdWorkspacePremium className="mr-2 w-6 h-6" /> Experience
@@ -322,6 +322,7 @@ const Template2Form = () => {
                   onChange={(e) =>
                     handleExperienceChange(index, e.target.value)
                   }
+                  placeholder="Write your Experience"
                   rows={2}
                   className="w-full bg-primary bg-opacity-10 rounded border border-primary/60  focus:bg-transparent focus:ring-2 focus:ring-primary/40 text-base outline-none text-black leading-8 transition-colors duration-200 ease-in-out l mb-2 px-3 py-2 border-gray-300 shadow-sm focus:ring-secondary focus:border-secondary"
                 />
@@ -331,7 +332,7 @@ const Template2Form = () => {
                   className="flex items-center px-4 py-2 bg-red-500 shadow-none text-white rounded-md hover:bg-red-600 transition-colors duration-200"
                 >
                   <MinusCircle size={20} className="mr-2" />
-                  Remove Experience
+                  Remove
                 </button>
               </div>
             ))}
@@ -344,6 +345,7 @@ const Template2Form = () => {
               Add Experience
             </button>
           </div>
+
           <div>
             <h2 className="text-3xl font-bold mb-4 text-[#036BFF] flex items-center">
               <Briefcase className="mr-2" />
@@ -351,7 +353,7 @@ const Template2Form = () => {
             </h2>
             <div className="space-y-6">
               {resumeData.skills.map((skill, index) => (
-                <div key={index} className="flex items-center space-x-4">
+                <div key={index} className="flex items-center space-x-4 ">
                   <Input
                     value={skill}
                     onChange={(e) =>
@@ -366,16 +368,15 @@ const Template2Form = () => {
                     className="ml-2 bg-red-500 px-3 py-2 text-white rounded-md hover:bg-red-600 transition-colors duration-200 flex items-center gap-2"
                   >
                     <MinusCircle size={20} />
-                    Remove
                   </button>
                 </div>
               ))}
             </div>
-            <div className="mt-4 flex items-center space-x-2">
+            <div className="mt-4 flex items-center space-x-2 ">
               <Input
                 id="newSkill"
                 placeholder="Enter a new skill"
-                className="flex-grow px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-secondary focus:border-secondary"
+                className=" px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-secondary focus:border-secondary"
               />
               <button
                 type="button"
@@ -388,7 +389,7 @@ const Template2Form = () => {
             </div>
           </div>
 
-          <div className="mb-12">
+          {/* <div className="mb-12">
             <h2 className="text-3xl font-bold mb-4 text-[#036BFF] flex items-center">
               <FaFolderOpen className="mr-2 w-6 h-6" /> Projects
             </h2>
@@ -449,9 +450,9 @@ const Template2Form = () => {
             >
               <PlusCircle size={20} className="mr-2" /> Add Project
             </button>
-          </div>
+          </div> */}
 
-          <div className="mb-12">
+          {/* <div className="mb-12">
             <h2 className="text-3xl font-bold mb-4 text-[#036BFF] flex items-center">
               <Award className="mr-2" /> Certificates
             </h2>
@@ -502,7 +503,7 @@ const Template2Form = () => {
             >
               <PlusCircle size={20} className="mr-2" /> Add Certificate
             </button>
-          </div>
+          </div> */}
 
           <button
             type="submit"

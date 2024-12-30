@@ -16,11 +16,11 @@ const Template2 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
     return (
       <div className="min-h-screen bg-gray-100 p-4 md:p-8" ref={ref}>
         <div className="mx-auto max-w-5xl bg-white shadow-lg">
-          <div className="grid grid-cols-2 md:grid-cols-2 sm:grid-cols-2">
-            <div className="bg-[#DD4B39] text-white p-6">
+          <div className="grid grid-cols-2 ">
+            <div className="bg-[#DD4B39] text-white p-2 sm:p-6">
               <div className="mb-8">
                 <div className="bg-white text-[#DD4B39] p-2 mb-4 inline-block">
-                  <h3 className="font-bold text-base md:text-lg">
+                  <h3 className="font-bold text-sm md:text-lg">
                     {typedFormData.field.toUpperCase()}
                   </h3>
                 </div>
@@ -32,7 +32,7 @@ const Template2 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
                     <IoLocation className="w-5 h-5 md:w-6 md:h-6" />
                     ADDRESS
                   </h3>
-                  <p className="text-xs md:text-sm break-words">
+                  <p className="text-[8px] md:text-sm break-words">
                     {typedFormData.address}
                   </p>
                 </section>
@@ -42,7 +42,7 @@ const Template2 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
                     <FaPhoneAlt className="w-4 h-4 md:w-5 md:h-5" />
                     CONTACT
                   </h3>
-                  <p className="text-xs md:text-sm">{typedFormData.phone}</p>
+                  <p className="text-[8px] md:text-sm">{typedFormData.phone}</p>
                 </section>
 
                 <section>
@@ -86,31 +86,31 @@ const Template2 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
               </div>
             </div>
 
-            <div className="p-6">
+            <div className="p-2 sm:p-6">
               <header className="mb-8">
-                <h1 className="text-3xl md:text-4xl font-bold text-[#DD4B39] mb-1">
+                <h1 className="text-sm sm:text-base md:text-3xl font-bold text-[#DD4B39] mb-1">
                   {typedFormData.name.toUpperCase()}
                 </h1>
-                <h2 className="text-lg md:text-xl font-bold text-[#DD4B39]">
+                <h2 className="text-xs sm:text-sm md:text-lg lg:text-xl font-bold text-[#DD4B39]">
                   {typedFormData.title.toUpperCase()}
                 </h2>
               </header>
 
               <div className="space-y-6">
                 <section>
-                  <h3 className="font-bold text-[#DD4B39] mb-2 text-sm md:text-lg border-b-2 border-[#DD4B39]">
+                  <h3 className="font-bold text-[#DD4B39] mb-2 text-xs sm:text-sm md:text-lg border-b-2 border-[#DD4B39]">
                     OBJECTIVE
                   </h3>
-                  <p className="text-xs md:text-sm">
+                  <p className="text-[8px] sm:text-xs md:text-sm">
                     {typedFormData.objective}
                   </p>
                 </section>
 
                 <section>
-                  <h3 className="font-bold text-[#DD4B39] mb-2 text-sm md:text-lg border-b-2 border-[#DD4B39]">
+                  <h3 className="font-bold text-[#DD4B39] mb-2 text-xs sm:text-sm md:text-lg border-b-2 border-[#DD4B39]">
                     EXPERIENCE
                   </h3>
-                  <ul className="text-xs md:text-sm list-disc list-inside">
+                  <ul className="text-[8px] sm:text-xs md:text-sm list-disc list-inside">
                     {typedFormData.experience.map((exp, index) => (
                       <li key={index}>{exp}</li>
                     ))}
