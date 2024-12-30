@@ -6,16 +6,7 @@ import { useResume } from "@/context/ResumeContext";
 import React, { useRef } from "react";
 import { IoMdDownload } from "react-icons/io";
 import { useReactToPrint } from "react-to-print";
-import { Template1 as TypeTemplate1 } from "@/data/ResumeData";
 
-interface Templates {
-  template1: {
-    component: React.JSX.Element;
-  };
-  template2: {
-    component: React.JSX.Element;
-  };
-}
 const templates = {
   template1: {
     component: Template1,
@@ -49,10 +40,10 @@ const Page = () => {
       <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-primary font-semibold mt-2">
         Download button is below
       </h3>
-      <div className="min-h-screen bg-gray-600 py-12 px-4 sm:px-6 lg:px-8 mt-20 w-full">
+      <div className="h-auto bg-gray-600 py-12 px-4 sm:px-6 lg:px-8 mt-20 w-full">
         <SelectedTemplate ref={resumeRef} />
       </div>
-      <div className="max-w-4xl mx-auto mt-8 mb-4">
+      <div className="max-w-4xl mx-auto mt-20 mb-4">
         <Button
           type="button"
           onClick={generatePDF}

@@ -14,9 +14,9 @@ const Template2 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
     const { formData } = useResume();
     const typedFormData = formData as TypeTemplate2;
     return (
-      <div className="mx-auto max-w-5xl bg-white p-3 shadow-lg " ref={ref}>
-        <div className="grid grid-cols-2 sm:grid-cols-3 ">
-          <div className="bg-[#DD4B39] text-white p-2 sm:p-6">
+      <div className=" bg-white p-3 shadow-lg  " ref={ref}>
+        <div className="grid grid-cols-2 sm:grid-cols-3 h-screen ">
+          <div className="bg-[#DD4B39]  text-white p-2 sm:p-6">
             <div className="mb-8">
               <div className="bg-white text-[#DD4B39] p-2 mb-4 inline-block">
                 <h3 className="font-bold text-sm md:text-lg">
