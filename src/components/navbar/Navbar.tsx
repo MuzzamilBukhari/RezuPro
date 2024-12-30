@@ -34,7 +34,7 @@ const Navbar = () => {
     if (window.scrollY > 10) {
       setScrolled(true);
     } else {
-      setScrolled(false); 
+      setScrolled(false);
     }
   };
 
@@ -47,13 +47,16 @@ const Navbar = () => {
 
   return (
     <header
-      className={`text-white body-font bg-transparent fixed w-full top-0 left-0 z-10 transition-all duration-300 ease-in-out ${
+      className={`text-white  body-font bg-transparent fixed w-full top-0 left-0 z-10 transition-all duration-300 ease-in-out ${
         scrolled ? "bg-white bg-opacity-50 backdrop-blur-lg" : ""
       } md:flex hidden`}
     >
       <div className="container mx-auto flex flex-wrap p-5 items-center">
         <div className="flex items-center text-primary">
-          <Link href="/" className="lg:ml-5 font-black text-3xl flex items-center gap-2">
+          <Link
+            href="/"
+            className="lg:ml-5 font-black text-3xl flex items-center gap-2"
+          >
             <Image
               src="/images/rezu-pro-black.png"
               alt="Logo Icon"

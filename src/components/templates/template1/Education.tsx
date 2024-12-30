@@ -3,7 +3,9 @@ import EducationType from "@/types/Education";
 export function Education({ education }: { education?: EducationType[] }) {
   return (
     <section className="mb-6">
-      <h2 className="text-lg font-bold mb-3 text-sky-600">EDUCATION</h2>
+      <h2 className="text-sm sm:text-lg font-bold mb-3 text-sky-600">
+        EDUCATION
+      </h2>
       <ul className="list-disc pl-5">
         {education?.map((edu) => (
           <li key={edu.id} className="text-sm">

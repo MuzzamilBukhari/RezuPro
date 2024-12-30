@@ -56,36 +56,31 @@ const Footer = () => {
         "https://www.facebook.com/profile.php?id=100084760552740&mibextid=ZbWKwL",
     },
   ];
+
   return (
-    <section className="bg-white backdrop-blur-md text-black body-font w-full">
-      <div className="container px-4 py-6 mx-auto flex items-center sm:flex-row flex-col">
+    <footer className="bg-white backdrop-blur-md text-black body-font w-full">
+      <div className="container mx-auto px-4 py-6 flex flex-col sm:flex-row sm:items-center justify-between">
         {/* Logo Section */}
-        <a className="flex title-font font-medium items-center md:justify-start justify-center">
+        <div className="flex items-center justify-center sm:justify-start mb-4 sm:mb-0">
           <Image
             src="/images/rezu-pro-black.png"
             alt="Logo"
-            width={180}
-            height={180}
+            width={120}
+            height={120}
+            className="object-contain"
           />
-        </a>
-
-        {/* Copyright Text */}
-        <p className="text-sm text-black pl-5 sm:ml-2 sm:pl-2 sm:border-l-2 sm:border-black sm:py-2 sm:mt-0 mt-4 whitespace-nowrap">
-          <span className="pl-5 font-medium">
+        </div>
+        <div className="text-center  mb-4 sm:mb-0 max-w-xs sm:max-w-full mx-auto sm:mx-0">
+          <p className="text-sm font-medium leading-6 whitespace-normal sm:whitespace-nowrap">
             © 2024 RezuPro - Developed By Huzaifa Naeem & Muzammil Bukhari
-          </span>
-        </p>
-
-        {/* Social Links Section */}
-        <div className="flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-end w-full space-x-8">
-          {/* Huzaifa Section */}
+          </p>
+        </div>
+        <div className="flex flex-wrap justify-center sm:justify-end gap-4">
           <SocialLinks name="Huzaifa" links={huzaifaLinks} />
-
-          {/* Muzammil Section */}
           <SocialLinks name="Muzzamil" links={muzzamilLinks} />
         </div>
       </div>
-    </section>
+    </footer>
   );
 };
 

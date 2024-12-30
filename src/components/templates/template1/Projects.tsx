@@ -3,7 +3,9 @@ import Project from "@/types/Project";
 export function Projects({ projects }: { projects?: Project[] }) {
   return (
     <section className="mb-6">
-      <h2 className="text-lg font-bold mb-3 text-sky-600">ACADEMIC PROJECTS</h2>
+      <h2 className="text-sm sm:text-lg font-bold mb-3 text-sky-600">
+        ACADEMIC PROJECTS
+      </h2>
       <ul className="list-disc space-y-3 pl-5">
         {projects?.map((project) => (
           <li key={project.id} className="text-sm">

@@ -1,9 +1,9 @@
 export function Skills({ skills }: { skills?: string[] }) {
   return (
     <section className="mb-6">
-      <h2 className="text-lg font-bold mb-3 text-sky-600">SKILLS</h2>
+      <h2 className="text-sm sm:text-lg font-bold mb-3 text-sky-600">SKILLS</h2>
       <ul
-        className="list-disc pl-5 grid grid-cols-2 gap-2 font-semibold"
+        className="list-disc pl-5 grid grid-cols-2 font-semibold"
         style={{
           listStyle: "disc",
           listStylePosition: "inside",

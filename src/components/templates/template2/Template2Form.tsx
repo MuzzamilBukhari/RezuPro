@@ -149,17 +149,12 @@ const Template2Form = () => {
 
   return (
     <div className="min-h-screen max-w-5xl bg-gradient-to-br from-[#036BFF] to-[#003EFF] py-12 px-4 sm:px-8 lg:px-10 mx-auto mt-10 mb-14">
-      <div className="mx-auto max-w-5xl bg-white shadow-lg p-6">
+      <div className="mx-auto max-w-5xl bg-white rounded-xl shadow-lg p-6">
         <h1 className="text-2xl font-bold mb-4">Resume Form</h1>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <div>
-              <label
-                htmlFor="field"
-                className="block text-sm font-medium text-black mb-1"
-              >
-                Field Of Studty
-              </label>
+              <Label htmlFor="field">Field Of Studty</Label>
               <Input
                 id="field"
                 name="field"
@@ -169,12 +164,7 @@ const Template2Form = () => {
               />
             </div>
             <div>
-              <label
-                htmlFor="address"
-                className="block text-sm font-medium text-black mb-1"
-              >
-                Address
-              </label>
+              <Label htmlFor="address">Address</Label>
               <Input
                 id="address"
                 name="address"
@@ -184,12 +174,7 @@ const Template2Form = () => {
               />
             </div>
             <div>
-              <label
-                htmlFor="phone"
-                className="block text-sm font-medium text-black mb-1"
-              >
-                Phone
-              </label>
+              <Label htmlFor="phone">Phone</Label>
               <Input
                 id="phone"
                 name="phone"
@@ -199,12 +184,7 @@ const Template2Form = () => {
               />
             </div>
             <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-black mb-1"
-              >
-                Email
-              </label>
+              <Label htmlFor="email">Email</Label>
               <Input
                 id="email"
                 name="email"
@@ -215,12 +195,7 @@ const Template2Form = () => {
               />
             </div>
             <div>
-              <label
-                htmlFor="dob"
-                className="block text-sm font-medium text-black mb-1"
-              >
-                Date Of Birth
-              </label>
+              <Label htmlFor="dob">Date Of Birth</Label>
               <Input
                 id="dob"
                 name="dob"
@@ -230,12 +205,7 @@ const Template2Form = () => {
               />
             </div>
             <div>
-              <label
-                htmlFor="gender"
-                className="block text-sm font-medium text-black mb-1"
-              >
-                Gender
-              </label>
+              <Label htmlFor="gender">Gender</Label>
               <Input
                 id="gender"
                 name="gender"
@@ -413,7 +383,7 @@ const Template2Form = () => {
                 className="flex items-center px-4 py-2 bg-secondary text-white rounded-md hover:bg-primary transition-colors duration-200"
               >
                 <PlusCircle size={20} className="mr-2" />
-                Add Skill
+                Add
               </button>
             </div>
           </div>

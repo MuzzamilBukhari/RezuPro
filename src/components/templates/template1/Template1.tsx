@@ -122,13 +122,13 @@ const Template1 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
     return (
       <div
         ref={ref}
-        className="max-w-4xl mx-auto bg-white px-16 pt-20 overflow-hidden"
+        className="max-w-4xl mx-auto bg-white px-4  sm:px-16 pt-20 overflow-hidden"
       >
         <header className=" text-sky-600 ">
-          <h1 className="text-lg sm:text-xl text-center font-bold">
+          <h1 className="text-[10px] sm:text-lg md:text-xl text-center font-bold">
             {typedFormData?.header.name.toUpperCase()}
           </h1>
-          <div className=" text-center text-black text-xs sm:text-sm">
+          <div className=" text-center text-black text-[5px] sm:text-sm">
             <a
               href={`mailto:${typedFormData?.header.email}`}
               className=" hover:underline"
@@ -138,18 +138,18 @@ const Template1 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
             <span className="mx-2">|</span>
             <span>{typedFormData?.header.phone}</span>
           </div>
-          <div className="mt-4 flex justify-between text-black">
+          <div className="mt-4 flex justify-between text-black text-[10px] ">
             {typedFormData?.header.github && (
               <a
                 style={{ display: "flex", alignItems: "center" }}
                 href={`https://github.com/${typedFormData?.header.github}`}
               >
                 <FaGithub
-                  style={{ width: "20px", height: "20px" }}
+                  style={{ width: "10px", height: "10px" }}
                   className="mr-2"
                 />
                 @
-                <span style={{ fontSize: "16px", lineHeight: "20px" }}>
+                <span style={{ fontSize: "10px", lineHeight: "10px" }}>
                   {typedFormData?.header.github}
                 </span>
               </a>
@@ -162,11 +162,11 @@ const Template1 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
                 className=" text-sm hover:underline"
               >
                 <FaLinkedin
-                  style={{ width: "20px", height: "20px" }}
+                  style={{ width: "10px", height: "10px" }}
                   className="mr-2"
                 />
                 /
-                <span style={{ fontSize: "16px", lineHeight: "20px" }}>
+                <span style={{ fontSize: "10px", lineHeight: "10px" }}>
                   {typedFormData?.header.linkedin}
                 </span>
               </a>
@@ -174,7 +174,7 @@ const Template1 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
           </div>
         </header>
 
-        <main className="py-6 px-3">
+        <main className="py-6 px-3 order-2 border-red-600">
           {formData?.skills.length ? <Skills skills={formData?.skills} /> : ""}
           {formData?.education.length ? (
             <Education education={typedFormData?.education} />

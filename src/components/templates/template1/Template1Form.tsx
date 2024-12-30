@@ -426,6 +426,7 @@ import {
   Send,
   User,
 } from "lucide-react";
+import { Input, Label } from "@/components";
 
 export default function Template1Form() {
   const { setFormData, setSelectedTemplate } = useResume();
@@ -549,25 +550,20 @@ export default function Template1Form() {
         onSubmit={handleSubmit}
         className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden"
       >
-        <div className="px-6 py-8 sm:p-10">
+        <div className="px-2 py-8 sm:p-10">
           <h1 className="text-3xl font-bold text-black text-center mb-8">
             Create Your Resume
           </h1>
 
           {/* Header form */}
           <div className="mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-[#036BFF] flex items-center">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#036BFF] flex items-center">
               <User className="mr-2" /> Personal Information
             </h2>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-black mb-1"
-                >
-                  Full Name
-                </label>
-                <input
+                <Label htmlFor="name"> Full Name</Label>
+                <Input
                   id="name"
                   name="name"
                   value={resumeData.header.name}
@@ -577,12 +573,7 @@ export default function Template1Form() {
                 />
               </div>
               <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-black mb-1"
-                >
-                  Email
-                </label>
+                <Label htmlFor="email">Email</Label>
                 <input
                   id="email"
                   name="email"
@@ -594,12 +585,7 @@ export default function Template1Form() {
                 />
               </div>
               <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium text-black mb-1"
-                >
-                  Phone
-                </label>
+                <Label htmlFor="phone">Phone</Label>
                 <input
                   id="phone"
                   name="phone"
@@ -610,12 +596,7 @@ export default function Template1Form() {
                 />
               </div>
               <div>
-                <label
-                  htmlFor="github"
-                  className="block text-sm font-medium text-black mb-1"
-                >
-                  GitHub (Optional)
-                </label>
+                <Label htmlFor="github">GitHub (Optional)</Label>
                 <input
                   id="github"
                   name="github"
@@ -625,12 +606,7 @@ export default function Template1Form() {
                 />
               </div>
               <div>
-                <label
-                  htmlFor="linkedin"
-                  className="block text-sm font-medium text-black mb-1"
-                >
-                  LinkedIn (Optional)
-                </label>
+                <Label htmlFor="linkedin">LinkedIn (Optional)</Label>
                 <input
                   id="linkedin"
                   name="linkedin"
@@ -644,7 +620,7 @@ export default function Template1Form() {
 
           {/* Skills Form */}
           <div className="mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-[#036BFF] flex items-center">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#036BFF] flex items-center">
               <Briefcase className="mr-2" /> Skills
             </h2>
             <div className="space-y-4">
@@ -680,14 +656,14 @@ export default function Template1Form() {
                 className="flex items-center px-4 py-2 bg-secondary text-white rounded-md hover:bg-primary transition-colors duration-200"
               >
                 <PlusCircle size={20} className="mr-2" />
-                Add Skill
+                Add
               </button>
             </div>
           </div>
 
           {/* Education form */}
           <div className="mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-[#036BFF] flex items-center">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#036BFF] flex items-center">
               <GraduationCap className="mr-2" /> Education
             </h2>
             {resumeData.education.map((edu, index) => (
@@ -751,7 +727,7 @@ export default function Template1Form() {
 
           {/* Projects form */}
           <div className="mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-[#036BFF] flex items-center">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#036BFF] flex items-center">
               <Briefcase className="mr-2" /> Projects
             </h2>
             {resumeData.projects.map((project, index) => (
@@ -815,7 +791,7 @@ export default function Template1Form() {
 
           {/* Certificates form */}
           <div className="mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-[#036BFF] flex items-center">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#036BFF] flex items-center">
               <Award className="mr-2" /> Certificates
             </h2>
             {resumeData.certificates.map((certificate, index) => (

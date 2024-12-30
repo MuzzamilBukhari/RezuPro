@@ -31,11 +31,11 @@ const Page = ({ params }: { params: { template: string } }) => {
   }
 
   return (
-    <div className="flex justify-center items-center flex-col mt-36">
+    <div className="flex justify-center items-center flex-col mt-36 text-center">
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-black">
         Build your Resume
       </h1>
-      <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-primary font-semibold mt-8">
+      <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-primary font-semibold mt-2">
         Enter your Resume details
       </h3>
       <SelectedTemplateForm />

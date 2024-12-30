@@ -7,7 +7,9 @@ export function Certificates({
 }) {
   return (
     <section>
-      <h2 className="text-lg font-bold mb-3 text-sky-600">CERTIFICATES</h2>
+      <h2 className="text-sm sm:text-lg font-bold mb-3 text-sky-600">
+        CERTIFICATES
+      </h2>
       <ul className="list-disc pl-5">
         {certificates?.map((cert, index) => (
           <li key={index} className="text-sm">
