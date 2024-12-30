@@ -10,7 +10,7 @@ const NavLink = ({
 }: {
   name: string;
   slug: string;
-  closeMenu: () => void;
+  closeMenu?: () => void;
 }) => {
   return (
     <Link
