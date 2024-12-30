@@ -122,7 +122,7 @@ const Template1 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
     return (
       <div
         ref={ref}
-        className="max-w-4xl border-2 border-red-600 mx-auto bg-white px-4  sm:px-16 pt-20 overflow-hidden"
+        className="max-w-4xl mx-auto bg-white px-4  sm:px-16 pt-20 overflow-hidden"
       >
         <header className=" text-sky-600 ">
           <h1 className="text-[10px] sm:text-lg md:text-xl text-center font-bold">
@@ -143,10 +143,11 @@ const Template1 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
               <a
                 style={{ display: "flex", alignItems: "center" }}
                 href={`https://github.com/${typedFormData?.header.github}`}
+                className=" text-sm hover:underline"
               >
                 <FaGithub
                   style={{ width: "10px", height: "10px" }}
-                  className=""
+                  className="mr-[2px] sm:mr-2"
                 />
                 @
                 <span style={{ fontSize: "10px", lineHeight: "10px" }}>
@@ -161,7 +162,11 @@ const Template1 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
                 style={{ display: "flex", alignItems: "center" }}
                 className=" text-sm hover:underline"
               >
-                <FaLinkedin style={{ width: "10px", height: "10px" }} />/
+                <FaLinkedin
+                  style={{ width: "10px", height: "10px" }}
+                  className="mr-[2px] sm:mr-2"
+                />
+                /
                 <span style={{ fontSize: "10px", lineHeight: "10px" }}>
                   {typedFormData?.header.linkedin}
                 </span>

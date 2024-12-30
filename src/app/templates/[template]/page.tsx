@@ -31,7 +31,7 @@ const Page = ({ params }: { params: { template: string } }) => {
   }
 
   return (
-    <div className="flex justify-center items-center flex-col mt-36 text-center">
+    <div className="container mx-auto mt-28 text-center">
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-black">
         Build your Resume
       </h1>

@@ -372,7 +372,7 @@ const Template2Form = () => {
                 </div>
               ))}
             </div>
-            <div className="mt-4 flex items-center space-x-2 ">
+            <div className="mt-4 flex items-center space-x-2">
               <Input
                 id="newSkill"
                 placeholder="Enter a new skill"

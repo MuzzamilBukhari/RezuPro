@@ -46,7 +46,7 @@ const Page = () => {
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-black pt-14">
         Your Resume
       </h1>
-      <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-primary font-semibold mt-8">
+      <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-primary font-semibold mt-2">
         Download button is below
       </h3>
       <div className="min-h-screen bg-gray-600 py-12 px-4 sm:px-6 lg:px-8 mt-20 w-full">
