@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -43,6 +42,10 @@ const MobNavbar = () => {
     }
   };
 
+  const handleCloseMenu = () => {
+    setIsOpen(false);
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
@@ -54,7 +57,9 @@ const MobNavbar = () => {
   return (
     <header
       className={`text-black hover:text-secondary font-semibold body-font flex flex-col md:hidden w-full fixed top-0 left-0 z-10 transition-all duration-300 ${
-        isScrolled ? "bg-white bg-opacity-50 backdrop-blur-lg" : "bg-transparent"
+        isScrolled
+          ? "bg-white bg-opacity-50 backdrop-blur-lg"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto flex justify-between items-center p-5">
@@ -88,7 +93,12 @@ const MobNavbar = () => {
         } flex-col items-center gap-2 text-base justify-center absolute top-16 right-0 bg-white bg-opacity-55 backdrop-blur-lg rounded-lg p-4 w-64 h-[calc(100vh-4rem)]`}
       >
         {navItems.map((item) => (
-          <NavLink slug={item.slug} key={item.id} name={item.name} />
+          <NavLink
+            slug={item.slug}
+            key={item.id}
+            name={item.name}
+            closeMenu={handleCloseMenu}
+          />
         ))}
       </nav>
     </header>

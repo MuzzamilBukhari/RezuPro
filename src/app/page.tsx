@@ -1,9 +1,16 @@
-import { Contact, HeroSection } from "@/components/";
+import {
+  BestTemplate,
+  Testimonials,
+  Newsletter,
+  HeroSection,
+} from "@/components/";
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <Contact />
+      <BestTemplate />
+      <Testimonials />
+      <Newsletter />
     </>
   );
 }

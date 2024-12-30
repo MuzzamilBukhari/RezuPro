@@ -9,6 +9,9 @@ import Template1 from "./templates/template1/Template1";
 import Template2 from "./templates/template2/Template2";
 import Template1Form from "./templates/template1/Template1Form";
 import Template2Form from "./templates/template2/Template2Form";
+import BestTemplate from "./best-template-section/BestTemplate";
+import Testimonials from "./testimonials/Testimonials";
+import Newsletter from "./newsletter/NewsletterSection";
 
 export {
   HeroSection,
@@ -25,4 +28,7 @@ export {
   Template2,
   Template1Form,
   Template2Form,
+  BestTemplate,
+  Testimonials,
+  Newsletter,
 };
