@@ -389,7 +389,8 @@ const Template2Form = () => {
             </div>
           </div>
 
-          {/* <div className="mb-12">
+          {/* Projects */}
+          <div className="mb-12">
             <h2 className="text-3xl font-bold mb-4 text-[#036BFF] flex items-center">
               <FaFolderOpen className="mr-2 w-6 h-6" /> Projects
             </h2>
@@ -450,7 +451,7 @@ const Template2Form = () => {
             >
               <PlusCircle size={20} className="mr-2" /> Add Project
             </button>
-          </div> */}
+          </div>
 
           {/* <div className="mb-12">
             <h2 className="text-3xl font-bold mb-4 text-[#036BFF] flex items-center">
