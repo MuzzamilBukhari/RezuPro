@@ -181,6 +181,7 @@ const Template2Form = () => {
                 value={resumeData.phone}
                 onChange={handleInputChange}
                 className="w-full mb-2 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-secondary focus:border-secondary"
+                required
               />
             </div>
             <div>
@@ -192,6 +193,7 @@ const Template2Form = () => {
                 value={resumeData.email}
                 onChange={handleInputChange}
                 className="w-full mb-2 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-secondary focus:border-secondary"
+                required
               />
             </div>
             <div>
@@ -212,6 +214,7 @@ const Template2Form = () => {
                 value={resumeData.gender}
                 onChange={handleInputChange}
                 className="w-full mb-2 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-secondary focus:border-secondary"
+                required
               />
             </div>
           </div>
@@ -287,6 +290,7 @@ const Template2Form = () => {
                 name="name"
                 value={resumeData.name}
                 onChange={handleInputChange}
+                required
               />
             </div>
             <div>

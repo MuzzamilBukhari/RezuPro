@@ -96,65 +96,73 @@ const Template2 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
             </header>
 
             <div className="space-y-6">
-              <section>
-                <h3 className="font-bold text-[#DD4B39] mb-2 text-xs sm:text-sm md:text-lg border-b-2 border-[#DD4B39]">
-                  OBJECTIVE
-                </h3>
-                <p className="text-[8px] sm:text-xs md:text-sm">
-                  {typedFormData.objective}
-                </p>
-              </section>
+              {typedFormData.objective && (
+                <section>
+                  <h3 className="font-bold text-[#DD4B39] mb-2 text-xs sm:text-sm md:text-lg border-b-2 border-[#DD4B39]">
+                    OBJECTIVE
+                  </h3>
+                  <p className="text-[8px] sm:text-xs md:text-sm">
+                    {typedFormData.objective}
+                  </p>
+                </section>
+              )}
 
-              <section>
-                <h3 className="font-bold text-[#DD4B39] mb-2 text-xs sm:text-sm md:text-lg border-b-2 border-[#DD4B39]">
-                  EXPERIENCE
-                </h3>
-                <ul className="text-[8px] sm:text-xs md:text-sm list-disc list-inside">
-                  {typedFormData.experience.map((exp, index) => (
-                    <li key={index}>{exp}</li>
-                  ))}
-                </ul>
-              </section>
+              {typedFormData.experience.length && (
+                <section>
+                  <h3 className="font-bold text-[#DD4B39] mb-2 text-xs sm:text-sm md:text-lg border-b-2 border-[#DD4B39]">
+                    EXPERIENCE
+                  </h3>
+                  <ul className="text-[8px] sm:text-xs md:text-sm list-disc list-inside">
+                    {typedFormData.experience.map((exp, index) => (
+                      <li key={index}>{exp}</li>
+                    ))}
+                  </ul>
+                </section>
+              )}
 
-              <section>
-                <h3 className="font-bold text-[#DD4B39] mb-2 text-xs sm:text-sm md:text-lg border-b-2 border-[#DD4B39]">
-                  SKILLS
-                </h3>
-                <ul className="text-[8px] sm:text-xs md:text-sm list-disc list-inside">
-                  {typedFormData.skills.map((skill, index) => (
-                    <li key={index}>{skill}</li>
-                  ))}
-                </ul>
-              </section>
+              {typedFormData.skills.length && (
+                <section>
+                  <h3 className="font-bold text-[#DD4B39] mb-2 text-xs sm:text-sm md:text-lg border-b-2 border-[#DD4B39]">
+                    SKILLS
+                  </h3>
+                  <ul className="text-[8px] sm:text-xs md:text-sm list-disc list-inside">
+                    {typedFormData.skills.map((skill, index) => (
+                      <li key={index}>{skill}</li>
+                    ))}
+                  </ul>
+                </section>
+              )}
 
-              <section>
-                <h3 className="font-bold text-[#DD4B39] mb-2 text-xs sm:text-sm md:text-lg border-b-2 border-[#DD4B39]">
-                  PROJECTS
-                </h3>
-                <ul className="text-[8px] sm:text-xs md:text-sm list-disc list-inside">
-                  {typedFormData.projects.map((project) => (
-                    <li key={project.id} className="text-sm">
-                      <div className="font-semibold">
-                        <span>{project.name}</span> |
-                        <span className="ml-2">{project.description}</span>
-                      </div>
-                      <div>
-                        <div>
-                          <span> Project link :- </span>
-                          <a
-                            href={project.link}
-                            className="text-sky-600 hover:underline"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {project.link}
-                          </a>
+              {typedFormData.projects.length && (
+                <section>
+                  <h3 className="font-bold text-[#DD4B39] mb-2 text-xs sm:text-sm md:text-lg border-b-2 border-[#DD4B39]">
+                    PROJECTS
+                  </h3>
+                  <ul className="text-[8px] sm:text-xs md:text-sm list-disc list-inside">
+                    {typedFormData.projects.map((project) => (
+                      <li key={project.id} className="text-sm">
+                        <div className="font-semibold">
+                          <span>{project.name}</span> |
+                          <span className="ml-2">{project.description}</span>
                         </div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </section>
+                        <div>
+                          <div>
+                            <span> Project link :- </span>
+                            <a
+                              href={project.link}
+                              className="text-sky-600 hover:underline"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {project.link}
+                            </a>
+                          </div>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
             </div>
           </div>
         </div>
