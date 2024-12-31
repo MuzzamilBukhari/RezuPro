@@ -14,8 +14,8 @@ const Template2 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
     const { formData } = useResume();
     const typedFormData = formData as TypeTemplate2;
     return (
-      <div className=" bg-white p-3 shadow-lg  " ref={ref}>
-        <div className="grid grid-cols-2 sm:grid-cols-3 h-screen ">
+      <div className=" bg-white p-3 shadow-lg resume-container " ref={ref}>
+        <div className="grid grid-cols-2 sm:grid-cols-3 h-full">
           <div className="bg-[#DD4B39]  text-white p-2 sm:p-6">
             <div className="mb-8">
               <div className="bg-white text-[#DD4B39] p-2 mb-4 inline-block">
@@ -87,10 +87,10 @@ const Template2 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
 
           <div className="p-2 sm:p-6 sm:col-span-2">
             <header className="mb-8">
-              <h1 className="text-sm sm:text-base md:text-3xl font-bold text-[#DD4B39] mb-1">
+              <h1 className="text-sm sm:text-base md:text-3xl lg:text-4xl font-bold text-[#DD4B39] mb-1">
                 {typedFormData.name.toUpperCase()}
               </h1>
-              <h2 className="text-xs sm:text-sm md:text-lg lg:text-xl font-bold text-[#DD4B39]">
+              <h2 className="text-xs sm:text-sm md:text-lg lg:text-2xl font-bold text-[#DD4B39]">
                 {typedFormData.title.toUpperCase()}
               </h2>
             </header>
