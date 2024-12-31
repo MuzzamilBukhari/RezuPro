@@ -64,24 +64,28 @@ const Template2 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
                   GENDER: {typedFormData.gender}
                 </p>
               </section>
-
-              <section>
-                <h3 className="font-bold mb-2 flex items-center gap-2 text-sm md:text-base">
-                  <IoSchool className="w-5 h-5 md:w-6 md:h-6" />
-                  EDUCATION
-                </h3>
-                <div className="space-y-4">
-                  {typedFormData.education.map((edu) => (
-                    <div key={edu.id}>
-                      <h4 className="font-bold text-xs md:text-sm">
-                        {edu.degree}:
-                      </h4>
-                      <p className="text-xs md:text-sm">{edu.institution}</p>
-                      <p className="text-xs md:text-sm">{edu.details}</p>
-                    </div>
-                  ))}
-                </div>
-              </section>
+              {/* Education */}
+              {typedFormData.education.length ? (
+                <section>
+                  <h3 className="font-bold mb-2 flex items-center gap-2 text-sm md:text-base">
+                    <IoSchool className="w-5 h-5 md:w-6 md:h-6" />
+                    EDUCATION
+                  </h3>
+                  <div className="space-y-4">
+                    {typedFormData.education.map((edu) => (
+                      <div key={edu.id}>
+                        <h4 className="font-bold text-xs md:text-sm">
+                          {edu.degree}:
+                        </h4>
+                        <p className="text-xs md:text-sm">{edu.institution}</p>
+                        <p className="text-xs md:text-sm">{edu.details}</p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              ) : (
+                ""
+              )}
             </div>
           </div>
 
@@ -107,7 +111,7 @@ const Template2 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
                 </section>
               )}
 
-              {typedFormData.experience.length && (
+              {typedFormData.experience.length ? (
                 <section>
                   <h3 className="font-bold text-[#DD4B39] mb-2 text-xs sm:text-sm md:text-lg border-b-2 border-[#DD4B39]">
                     EXPERIENCE
@@ -118,9 +122,11 @@ const Template2 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
                     ))}
                   </ul>
                 </section>
+              ) : (
+                ""
               )}
 
-              {typedFormData.skills.length && (
+              {typedFormData.skills.length ? (
                 <section>
                   <h3 className="font-bold text-[#DD4B39] mb-2 text-xs sm:text-sm md:text-lg border-b-2 border-[#DD4B39]">
                     SKILLS
@@ -131,9 +137,11 @@ const Template2 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
                     ))}
                   </ul>
                 </section>
+              ) : (
+                ""
               )}
 
-              {typedFormData.projects.length && (
+              {typedFormData.projects.length ? (
                 <section>
                   <h3 className="font-bold text-[#DD4B39] mb-2 text-xs sm:text-sm md:text-lg border-b-2 border-[#DD4B39]">
                     PROJECTS
@@ -162,6 +170,8 @@ const Template2 = forwardRef<HTMLDivElement, ResumeTemplateProps>(
                     ))}
                   </ul>
                 </section>
+              ) : (
+                ""
               )}
             </div>
           </div>
