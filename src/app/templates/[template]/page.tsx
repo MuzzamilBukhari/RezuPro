@@ -30,7 +30,7 @@ const Page = ({ params }: { params: { template: string } }) => {
     );
   }
 
-  return (
+  return template ? (
     <div className="container mx-auto mt-28 text-center">
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-black">
         Build your Resume
@@ -40,6 +40,8 @@ const Page = ({ params }: { params: { template: string } }) => {
       </h3>
       <SelectedTemplateForm />
     </div>
+  ) : (
+    <div className="mt-28">loading</div>
   );
 };
 

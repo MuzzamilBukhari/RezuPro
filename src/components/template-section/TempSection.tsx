@@ -2,6 +2,8 @@ import React from "react";
 
 import TempSectionCard from "./TempSectionCard";
 import { TbCircleNumber1, TbCircleNumber2 } from "react-icons/tb";
+import template1 from "../../../public/images/template-1.jpg";
+import template2 from "../../../public/images/template-2.jpg";
 
 const TempSection = () => {
   return (
@@ -31,10 +33,12 @@ const TempSection = () => {
           <TempSectionCard
             name="template1"
             icon={<TbCircleNumber1 className="text-black" />}
+            imgUrl={template1}
           />
           <TempSectionCard
             name="template2"
             icon={<TbCircleNumber2 className="text-black" />}
+            imgUrl={template2}
           />
         </div>
       </div>

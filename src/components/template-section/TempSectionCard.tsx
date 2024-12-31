@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { Button } from "../";
 import { IoCreateOutline } from "react-icons/io5";
 import Link from "next/link";
@@ -7,9 +7,11 @@ import Link from "next/link";
 const TempSectionCard = ({
   name,
   icon,
+  imgUrl,
 }: {
   name: string;
   icon: React.ReactNode;
+  imgUrl: StaticImageData;
 }) => {
   return (
     <section className="text-black body-font min-h-screen flex items-center pb-16 ">
@@ -22,7 +24,7 @@ const TempSectionCard = ({
           <Image
             className="mb-10 object-cover object-center rounded transition-transform hover:scale-105 duration-500 shadow-[0_4px_20px_rgba(0,0,0,0.6)] hover:shadow-black hover:shadow-lg"
             alt="resume"
-            src="/images/template-1.jpg"
+            src={imgUrl}
             width={450}
             height={550}
           />

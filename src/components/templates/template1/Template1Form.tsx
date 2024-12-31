@@ -20,6 +20,7 @@ import { Input, Label } from "@/components";
 
 export default function Template1Form() {
   const { setFormData, setSelectedTemplate } = useResume();
+  const [loader, setLoader] = useState(false);
   const router = useRouter();
 
   const [resumeData, setResumeData] = useState<Template1>({
@@ -108,6 +109,7 @@ export default function Template1Form() {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
+    setLoader(true);
     e.preventDefault();
     const filteredData = {
       ...resumeData,
@@ -130,8 +132,9 @@ export default function Template1Form() {
     };
     console.log(JSON.stringify(filteredData, null, 2));
     setSelectedTemplate("template1");
-    setFormData(filteredData); // Save filtered form data to context
-    router.push(`/templates/template1/${resumeData.header.name}`); // Navigate to the template page
+    setFormData(filteredData);
+    router.push(`/templates/template1/${resumeData.header.name}`);
+    setLoader(false);
   };
 
   return (
@@ -440,7 +443,14 @@ export default function Template1Form() {
             type="submit"
             className="w-full py-3 bg-secondary text-white rounded-full font-bold text-base sm:text-lg shadow-lg hover:bg-primary transition-all duration-300"
           >
-            <Send size={24} className="inline mr-2" /> Generate Resume
+            {loader ? (
+              "loading"
+            ) : (
+              <span>
+                {" "}
+                <Send size={24} className="inline mr-2" /> Generate Resume
+              </span>
+            )}
           </button>
         </div>
       </form>
